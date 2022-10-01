@@ -1,0 +1,22 @@
+using System;
+
+namespace _07.CalculateHoursProjects
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Input architect name and number of projects
+            string name = Console.ReadLine();
+            int projects = int.Parse(Console.ReadLine());
+
+            //calculate projects * 3 hours each
+            int hours = projects * 3;
+
+            //Output showing text and calculations
+            Console.WriteLine($"The architect {name} will need {hours} hours to complete {projects} project/s.");
+
+        }
+    }
+}
+
