@@ -1,0 +1,23 @@
+using System;
+
+namespace _08_PetFoodPrice
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            //Input quantity of dog's and cat's food
+            int dog = int.Parse(Console.ReadLine());
+            int cat = int.Parse(Console.ReadLine());
+
+            //calculate total price per order
+            double a = dog * 2.50;
+            double b = cat * 4.00;
+            double total = a + b;
+
+            //Output showing text with summary of order
+            Console.WriteLine($"{total} lv.");
+        }
+    }
+}
+
