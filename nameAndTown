@@ -1,0 +1,17 @@
+using System;
+
+namespace WriteName
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string firstName = "Leda";
+            string lastName = "Trifonova";
+            int age = 38;
+            string town = "Pleven";
+
+            Console.WriteLine($"You are {firstName} {lastName} @ {age}-years old person from {town}");
+        }
+    }
+}
