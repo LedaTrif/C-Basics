@@ -11,7 +11,7 @@ namespace _03TimePlus15Minutes
 
             int minutesCnt = minutes + 15;
 
-          if(minutesCnt>60)
+          if(minutesCnt>=60)
             {
                 hours += 1;
                 minutesCnt -= 60;
