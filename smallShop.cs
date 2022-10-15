@@ -2,24 +2,24 @@ using System;
 
 namespace _05SmallShop
 {
-    class Program
+    internal class Program
     {
         static void Main(string[] args)
         {
             string product = Console.ReadLine();
-            string city= Console.ReadLine();
-            double order = double.Parse(Console.ReadLine());
+            string town= Console.ReadLine();
+            double quantity = double.Parse(Console.ReadLine());
 
             double price = 0;
 
-            switch (city)
+            switch (town)
             {
                 case "Sofia":
-                    if (product=="coffee")
+                    if (product == "coffee")
                     {
                         price = 0.5;
                     }
-                    else if (product=="water")
+                    else if (product == "water")
                     {
                         price = 0.80;
                     }
@@ -36,7 +36,7 @@ namespace _05SmallShop
                         price = 1.60;
                     }
                     break;
-                case "Plovdid":
+                case "Plovdiv":
                     if (product == "coffee")
                     {
                         price = 0.4;
@@ -69,7 +69,7 @@ namespace _05SmallShop
                     }
                     else if (product == "beer")
                     {
-                        price =1.1;
+                        price = 1.1;
                     }
                     else if (product == "sweets")
                     {
@@ -80,15 +80,18 @@ namespace _05SmallShop
                         price = 1.55;
                     }
                     break;
-                default:
-                    break;
+
+          
             }
             
 
-            double finalPrice = order * price;
-            Console.WriteLine(finalPrice);
+            double finalPrice = quantity * price;
+            
+            
+                Console.WriteLine(finalPrice);
+            }
 
         }
     }
-}
+
 
