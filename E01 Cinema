@@ -1,0 +1,36 @@
+using System;
+
+namespace E01Cinema
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            string type = Console.ReadLine();
+            int r = int.Parse(Console.ReadLine());
+            int c = int.Parse(Console.ReadLine());
+
+            int totalSeats = r * c;
+
+
+            if (type == "Premiere")
+            {
+                double income = totalSeats * 12;
+                Console.WriteLine($"{income:f2} leva");
+            }
+            else if (type == "Normal")
+            {
+                double income = totalSeats * 7.50;
+                Console.WriteLine($"{income:f2} leva");
+            }
+            else if (type == "Discount")
+            {
+                double income = totalSeats * 5;
+                Console.WriteLine($"{income:f2} leva");
+            }
+
+
+        }
+    }
+}
+
