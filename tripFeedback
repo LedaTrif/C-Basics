@@ -1,0 +1,139 @@
+using System;
+
+namespace E09SkiVacation
+{
+    class Program
+    {
+        static void Main(string[] args)
+        {
+            int daysCount = int.Parse(Console.ReadLine());
+            string roomtype = Console.ReadLine();
+            string feedback = Console.ReadLine();
+
+            int nights = daysCount - 1;
+            
+
+            switch(roomtype)
+            {
+                case "room for one person":
+                    {
+                        double totalPrice = nights * 18;
+                        if(feedback=="positive")
+                        {
+                            totalPrice += totalPrice*0.25;
+                            Console.WriteLine($"{totalPrice:f2}");
+                        }
+                        else if(feedback=="negative")
+                        {
+                            totalPrice -= totalPrice*0.10;
+                            Console.WriteLine($"{totalPrice:f2}");
+                        }
+                    }
+                    break;
+                case "apartment":
+                    
+                    if (daysCount < 10)
+                    {  double totalPrice= ((nights * 25)-(nights*25)*0.3);
+
+                        if (feedback == "positive")
+                        {
+                            totalPrice += totalPrice * 0.25;
+                            Console.WriteLine($"{totalPrice:f2}");
+                        }
+                        else if (feedback == "negative")
+                        {
+                            totalPrice -= totalPrice*0.10;
+                            Console.WriteLine($"{totalPrice:f2}");
+                        }
+
+                    }
+                    else if (daysCount >= 10 && daysCount <= 15)
+                    {
+                        double totalPrice = ((nights * 25) - (nights * 25) * 0.35);
+
+                        if (feedback == "positive")
+                        {
+                            totalPrice+=totalPrice*0.25;
+                            Console.WriteLine($"{totalPrice:f2}");
+                        }
+                        else if (feedback == "negative")
+                        {
+                            totalPrice -= totalPrice*0.10;
+                            Console.WriteLine($"{totalPrice:f2}");
+                        }
+
+                    }
+                    else if (daysCount > 15)
+                    {
+                        double totalPrice = ((nights * 25) - (nights * 25) * 0.5);
+
+                        if (feedback == "positive")
+                        {
+                            totalPrice += totalPrice*0.25;
+                            Console.WriteLine($"{totalPrice:f2}");
+                        }
+                        else if (feedback == "negative")
+                        {
+                            totalPrice -= totalPrice*0.10;
+                            Console.WriteLine($"{totalPrice:f2}");
+                        }
+
+                    }
+                    break;
+                case "president apartment":
+                    if (daysCount < 10)
+                    {
+                        double totalPrice = ((nights * 35) - (nights * 35) * 0.1);
+
+                        if (feedback == "positive")
+                        {
+                            totalPrice += totalPrice*0.25;
+                            Console.WriteLine($"{totalPrice:f2}");
+                        }
+                        else if (feedback == "negative")
+                        {
+                            totalPrice -= totalPrice*0.10;
+                            Console.WriteLine($"{totalPrice:f2}");
+                        }
+
+                    }
+                    else if (daysCount >= 10 && daysCount <= 15)
+                    {
+                        double totalPrice = ((nights * 35) - (nights * 35) * 0.15);
+
+                        if (feedback == "positive")
+                        {
+                            totalPrice += totalPrice*0.25;
+                            Console.WriteLine($"{totalPrice:f2}");
+                        }
+                        else if (feedback == "negative")
+                        {
+                            totalPrice -= totalPrice*0.10;
+                            Console.WriteLine($"{totalPrice:f2}");
+                        }
+
+                    }
+                    else if (daysCount > 15)
+                    {
+                        double totalPrice = ((nights * 35) - (nights * 35) * 0.2);
+
+                        if (feedback == "positive")
+                        {
+                            totalPrice += totalPrice*0.25;
+                            Console.WriteLine($"{totalPrice:f2}");
+                        }
+                        else if (feedback == "negative")
+                        {
+                            totalPrice -= totalPrice*0.10;
+                            Console.WriteLine($"{totalPrice:f2}");
+                        }
+
+                    }
+                    break;
+
+            }
+
+        }
+    }
+}
+
